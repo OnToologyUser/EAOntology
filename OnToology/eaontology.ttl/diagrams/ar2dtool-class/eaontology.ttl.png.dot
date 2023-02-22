@@ -1,0 +1,52 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "prov:Agent" "eao:ExpectationEvaluation" "ebocaev:Evidence" "eao:ArtefactLevel" "c751873df4d803839e2f28768625dc8f" "eao:ExpectationAnalysis" "eao:Technique" "eao:EthicalAnalysis" "eao:forsesigtAnalysis" "1e8d759785b03b3687aba2645978c362" "b060d897ff235cd279329b4ccdfa04da" "eao:EthicalIssue" "eao:Artefact" "eao:ApplicationLevel" "eao:EthicalEvaluation" "eao:Feature" "eao:EthicalAssessment" "eao:Expectation" "eao:Source" "eao:Application" "modsci:Technology" ; /*classes style*/
+	"NULL" -> "7cc2d869:1867962a371:-7ffc" [ label = "owl:unionOf" ];
+	"NULL" -> "7cc2d869:1867962a371:-7ffb" [ label = "owl:unionOf" ];
+	"NULL" -> "eao:EthicalEvaluation" [ label = "rdf:first" ];
+	"NULL" -> "7cc2d869:1867962a371:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "7cc2d869:1867962a371:-7ff9" [ label = "owl:unionOf" ];
+	"NULL" -> "eao:forsesigtAnalysis" [ label = "rdf:first" ];
+	"NULL" -> "eao:Application" [ label = "rdf:first" ];
+	"NULL" -> "eao:Artefact" [ label = "rdf:first" ];
+	"NULL" -> "7cc2d869:1867962a371:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "eao:ExpectationAnalysis" [ label = "rdf:first" ];
+	"ebocaev:Evidence" -> "owl:Thing" [ label = "pav:createdOn" ];
+	"modsci:Technology" -> "owl:Thing" [ label = "eao:usedBy" ];
+	"eao:forsesigtAnalysis" -> "eao:EthicalEvaluation" [ label = "eao:includes" ];
+	"eao:EthicalAnalysis" -> "owl:Thing" [ label = "eao:isAbout" ];
+	"modsci:Technology" -> "eao:Feature" [ label = "eao:hasFeature" ];
+	"eao:Feature" -> "xsd:boolean" [ label = "eao:formalFeaure" ];
+	"eao:ExpectationEvaluation" -> "owl:Thing" [ label = "eao:suggest" ];
+	"eao:Artefact" -> "eao:Application" [ label = "eao:isUsedIn" ];
+	"modsci:Technology" -> "eao:Technique" [ label = "eao:isCollectionOf" ];
+	"eao:Feature" -> "xsd:boolean" [ label = "eao:functionalFeature" ];
+	"eao:ExpectationEvaluation" -> "xsd:string" [ label = "eao:description" ];
+	"eao:ArtefactLevel" -> "owl:Thing" [ label = "rdfs:comment" ];
+	"eao:ExpectationEvaluation" -> "owl:Thing" [ label = "pav:createdBy" ];
+	"eao:ExpectationEvaluation" -> "eao:Expectation" [ label = "eao:supportExpectation" ];
+	"eao:EthicalAssessment" -> "b060d897ff235cd279329b4ccdfa04da" [ label = "eao:consistsOf" ];
+	"prov:Agent" -> "owl:Thing" [ label = "foaf:mbox" ];
+	"eao:ExpectationAnalysis" -> "eao:Expectation" [ label = "eao:analyses" ];
+	"eao:Technique" -> "xsd:string" [ label = "eao:specificActivity" ];
+	"eao:ExpectationEvaluation" -> "eao:Expectation" [ label = "eao:contradictsExpectation" ];
+	"eao:EthicalAssessment" -> "owl:Thing" [ label = "dcterms:identifier" ];
+	"eao:EthicalAssessment" -> "prov:Agent" [ label = "pav:authoredBy" ];
+	"modsci:Technology" -> "xsd:string" [ label = "eao:purpose" ];
+	"eao:ExpectationAnalysis" -> "eao:ExpectationEvaluation" [ label = "eao:hasExpectationEvaluation" ];
+	"eao:EthicalAnalysis" -> "c751873df4d803839e2f28768625dc8f" [ label = "eao:hasEthicalEvaluation" ];
+	"ebocaev:Evidence" -> "owl:Thing" [ label = "pav:lastUpdatedOn" ];
+	"prov:Agent" -> "owl:Thing" [ label = "foaf:givenName" ];
+	"eao:EthicalEvaluation" -> "eao:Source" [ label = "pav:derivedFrom" ];
+	"modsci:Technology" -> "xsd:string" [ label = "eao:typeOfTechnology" ];
+	"eao:EthicalAssessment" -> "modsci:Technology" [ label = "eao:assessTechnology" ];
+	"eao:ApplicationLevel" -> "1e8d759785b03b3687aba2645978c362" [ label = "eao:focusesOn" ];
+	"eao:Application" -> "xsd:string" [ label = "eao:use" ];
+	"ebocaev:Evidence" -> "owl:Thing" [ label = "pav:version" ];
+	"eao:EthicalAssessment" -> "owl:Thing" [ label = "rdfs:label" ];
+	"eao:EthicalAnalysis" -> "eao:EthicalIssue" [ label = "eao:identify" ];
+	"eao:EthicalEvaluation" -> "eao:EthicalIssue" [ label = "eao:evaluates" ];
+
+}

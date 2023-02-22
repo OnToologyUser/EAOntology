@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "eao:issuesIdentification" "eao:SocialUsability" "eao:ExpectationEvaluation" "eao:Benefit" "eao:ArtefactLevel" "eao:Desirability" "eao:EthicalAnalysis" "eao:forsesigtAnalysis" "eao:TechnologyFeasability" "eao:ApplicationLevel" "eao:NegativeImplication" "eao:EthicalEvaluation" "eao:TechnologyLevel" ; /*classes style*/
+	"eao:SocialUsability" -> "eao:ExpectationEvaluation" [ label = "rdfs:subClassOf" ];
+	"eao:TechnologyFeasability" -> "eao:ExpectationEvaluation" [ label = "rdfs:subClassOf" ];
+	"eao:issuesIdentification" -> "eao:forsesigtAnalysis" [ label = "rdfs:subClassOf" ];
+	"eao:TechnologyLevel" -> "eao:EthicalAnalysis" [ label = "rdfs:subClassOf" ];
+	"eao:Desirability" -> "eao:ExpectationEvaluation" [ label = "rdfs:subClassOf" ];
+	"eao:Benefit" -> "eao:EthicalEvaluation" [ label = "rdfs:subClassOf" ];
+	"eao:ArtefactLevel" -> "eao:EthicalAnalysis" [ label = "rdfs:subClassOf" ];
+	"eao:ApplicationLevel" -> "eao:EthicalAnalysis" [ label = "rdfs:subClassOf" ];
+	"eao:NegativeImplication" -> "eao:EthicalEvaluation" [ label = "rdfs:subClassOf" ];
+
+}

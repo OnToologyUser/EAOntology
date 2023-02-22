@@ -1,0 +1,226 @@
+{
+  "@context" : {
+    "Application" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Application"
+    },
+    "EthicalIssue" : {
+      "@id" : "http://eaontology.linkeddata.es/def/EthicalIssue"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "isCollectionOf" : {
+      "@id" : "http://eaontology.linkeddata.es/def/isCollectionOf",
+      "@type" : "@id"
+    },
+    "includes" : {
+      "@id" : "http://eaontology.linkeddata.es/def/includes",
+      "@type" : "@id"
+    },
+    "Technology" : {
+      "@id" : "https://w3id.org/skgo/modsci#Technology"
+    },
+    "NegativeImplication" : {
+      "@id" : "http://eaontology.linkeddata.es/def/NegativeImplication"
+    },
+    "derivedFrom" : {
+      "@id" : "http://purl.org/pav/derivedFrom",
+      "@type" : "@id"
+    },
+    "issuesIdentification" : {
+      "@id" : "http://eaontology.linkeddata.es/def/issuesIdentification"
+    },
+    "EthicalAssessment" : {
+      "@id" : "http://eaontology.linkeddata.es/def/EthicalAssessment"
+    },
+    "Source" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Source"
+    },
+    "Desirability" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Desirability"
+    },
+    "Expectation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Expectation"
+    },
+    "analyses" : {
+      "@id" : "http://eaontology.linkeddata.es/def/analyses",
+      "@type" : "@id"
+    },
+    "assessTechnology" : {
+      "@id" : "http://eaontology.linkeddata.es/def/assessTechnology",
+      "@type" : "@id"
+    },
+    "hasFeature" : {
+      "@id" : "http://eaontology.linkeddata.es/def/hasFeature",
+      "@type" : "@id"
+    },
+    "ExpectationEvaluation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/ExpectationEvaluation"
+    },
+    "isUsedIn" : {
+      "@id" : "http://eaontology.linkeddata.es/def/isUsedIn",
+      "@type" : "@id"
+    },
+    "EthicalList" : {
+      "@id" : "http://eaontology.linkeddata.es/def/EthicalList"
+    },
+    "Feature" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Feature"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "formalFeaure" : {
+      "@id" : "http://eaontology.linkeddata.es/def/formalFeaure",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "typeOfTechnology" : {
+      "@id" : "http://eaontology.linkeddata.es/def/typeOfTechnology",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "usedBy" : {
+      "@id" : "http://eaontology.linkeddata.es/def/usedBy",
+      "@type" : "@id"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox"
+    },
+    "hasEthicalEvaluation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/hasEthicalEvaluation",
+      "@type" : "@id"
+    },
+    "evaluates" : {
+      "@id" : "http://eaontology.linkeddata.es/def/evaluates",
+      "@type" : "@id"
+    },
+    "Evidence" : {
+      "@id" : "https://w3id.org/eboca/evidences#Evidence"
+    },
+    "SocialUsability" : {
+      "@id" : "http://eaontology.linkeddata.es/def/SocialUsability"
+    },
+    "ApplicationLevel" : {
+      "@id" : "http://eaontology.linkeddata.es/def/ApplicationLevel"
+    },
+    "createdBy" : {
+      "@id" : "http://purl.org/pav/createdBy",
+      "@type" : "@id"
+    },
+    "specificActivity" : {
+      "@id" : "http://eaontology.linkeddata.es/def/specificActivity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "functionalFeature" : {
+      "@id" : "http://eaontology.linkeddata.es/def/functionalFeature",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Agent" : {
+      "@id" : "http://www.w3.org/ns/prov#Agent"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Benefit" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Benefit"
+    },
+    "givenName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "Technique" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Technique"
+    },
+    "createdOn" : {
+      "@id" : "http://purl.org/pav/createdOn"
+    },
+    "Artefact" : {
+      "@id" : "http://eaontology.linkeddata.es/def/Artefact"
+    },
+    "identify" : {
+      "@id" : "http://eaontology.linkeddata.es/def/identify",
+      "@type" : "@id"
+    },
+    "contradictsExpectation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/contradictsExpectation",
+      "@type" : "@id"
+    },
+    "isAbout" : {
+      "@id" : "http://eaontology.linkeddata.es/def/isAbout",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "ArtefactLevel" : {
+      "@id" : "http://eaontology.linkeddata.es/def/ArtefactLevel"
+    },
+    "authoredBy" : {
+      "@id" : "http://purl.org/pav/authoredBy",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "focusesOn" : {
+      "@id" : "http://eaontology.linkeddata.es/def/focusesOn",
+      "@type" : "@id"
+    },
+    "version" : {
+      "@id" : "http://purl.org/pav/version"
+    },
+    "consistsOf" : {
+      "@id" : "http://eaontology.linkeddata.es/def/consistsOf",
+      "@type" : "@id"
+    },
+    "EthicalEvaluation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/EthicalEvaluation"
+    },
+    "TechnologyFeasability" : {
+      "@id" : "http://eaontology.linkeddata.es/def/TechnologyFeasability"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ExpectationAnalysis" : {
+      "@id" : "http://eaontology.linkeddata.es/def/ExpectationAnalysis"
+    },
+    "Group" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Group"
+    },
+    "TechnologyLevel" : {
+      "@id" : "http://eaontology.linkeddata.es/def/TechnologyLevel"
+    },
+    "use" : {
+      "@id" : "http://eaontology.linkeddata.es/def/use",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "EthicalAnalysis" : {
+      "@id" : "http://eaontology.linkeddata.es/def/EthicalAnalysis"
+    },
+    "suggest" : {
+      "@id" : "http://eaontology.linkeddata.es/def/suggest",
+      "@type" : "@id"
+    },
+    "lastUpdatedOn" : {
+      "@id" : "http://purl.org/pav/lastUpdatedOn"
+    },
+    "supportExpectation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/supportExpectation",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://eaontology.linkeddata.es/def/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "forsesigtAnalysis" : {
+      "@id" : "http://eaontology.linkeddata.es/def/forsesigtAnalysis"
+    },
+    "purpose" : {
+      "@id" : "http://eaontology.linkeddata.es/def/purpose",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasExpectationEvaluation" : {
+      "@id" : "http://eaontology.linkeddata.es/def/hasExpectationEvaluation",
+      "@type" : "@id"
+    }
+  }
+}
