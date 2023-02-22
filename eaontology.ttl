@@ -1,0 +1,288 @@
+ @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eao: <http://eaontology.linkeddata.es/def/> .
+@prefix ebocaev: <https://w3id.org/eboca/evidences#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix modsci: <https://w3id.org/skgo/modsci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eao: a owl:Ontology ;
+    dcterms:creator "Karen Leticia Vazquez Flores" ;
+    dcterms:description "Ontology code created by Chowlk" ;
+    dcterms:title "EA-Ontology" ;
+    owl:versionInfo "0.0.3" .
+
+eao:Benefit a owl:Class ;
+    rdfs:label "Benefit" ;
+    rdfs:subClassOf eao:EthicalEvaluation .
+
+eao:Desirability a owl:Class ;
+    rdfs:label "Desirability" ;
+    rdfs:subClassOf eao:ExpectationEvaluation .
+
+eao:NegativeImplication a owl:Class ;
+    rdfs:label "Negative Implication" ;
+    rdfs:subClassOf eao:EthicalEvaluation .
+
+eao:SocialUsability a owl:Class ;
+    rdfs:label "Social Usability" ;
+    rdfs:subClassOf eao:ExpectationEvaluation .
+
+eao:TechnologyFeasability a owl:Class ;
+    rdfs:label "Technology Feasability" ;
+    rdfs:subClassOf eao:ExpectationEvaluation .
+
+eao:analyses a owl:ObjectProperty ;
+    rdfs:label "analyses" ;
+    rdfs:domain eao:ExpectationAnalysis ;
+    rdfs:range eao:Expectation .
+
+eao:assessTechnology a owl:ObjectProperty ;
+    rdfs:label "assess technology" ;
+    rdfs:domain eao:EthicalAssessment ;
+    rdfs:range modsci:Technology .
+
+eao:consistsOf a owl:ObjectProperty ;
+    rdfs:label "consists of" ;
+    rdfs:domain eao:EthicalAssessment ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( eao:ExpectationAnalysis ) ] .
+
+eao:contradictsExpectation a owl:ObjectProperty ;
+    rdfs:label "contradicts expectation" ;
+    rdfs:domain eao:ExpectationEvaluation ;
+    rdfs:range eao:Expectation .
+
+eao:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:domain eao:ExpectationEvaluation ;
+    rdfs:range xsd:string .
+
+eao:evaluates a owl:ObjectProperty ;
+    rdfs:label "evaluates" ;
+    rdfs:domain eao:EthicalEvaluation,
+        eao:ExpectationEvaluation,
+        eao:forsesigtAnalysis ;
+    rdfs:range eao:EthicalIssue,
+        eao:Expectation .
+
+eao:focusesOn a owl:ObjectProperty ;
+    rdfs:label "focuses on" ;
+    rdfs:domain eao:ApplicationLevel,
+        eao:ArtefactLevel,
+        eao:EthicalAnalysis,
+        eao:TechnologyLevel ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( eao:Artefact eao:Application ) ],
+        modsci:Technology .
+
+eao:formalFeaure a owl:DatatypeProperty ;
+    rdfs:label "formal feaure" ;
+    rdfs:domain eao:Feature ;
+    rdfs:range xsd:boolean .
+
+eao:functionalFeature a owl:DatatypeProperty ;
+    rdfs:label "functional feature" ;
+    rdfs:domain eao:Feature ;
+    rdfs:range xsd:boolean .
+
+eao:hasEthicalEvaluation a owl:ObjectProperty ;
+    rdfs:label "has ethical evaluation" ;
+    rdfs:domain eao:EthicalAnalysis ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( eao:EthicalEvaluation eao:forsesigtAnalysis ) ] .
+
+eao:hasExpectationEvaluation a owl:ObjectProperty ;
+    rdfs:label "has expectation evaluation" ;
+    rdfs:domain eao:ExpectationAnalysis ;
+    rdfs:range eao:ExpectationEvaluation .
+
+eao:hasFeature a owl:ObjectProperty ;
+    rdfs:label "has feature" ;
+    rdfs:domain modsci:Technology ;
+    rdfs:range eao:Feature .
+
+eao:identify a owl:ObjectProperty ;
+    rdfs:label "identify" ;
+    rdfs:domain eao:EthicalAnalysis ;
+    rdfs:range eao:EthicalIssue .
+
+eao:includes a owl:ObjectProperty ;
+    rdfs:label "includes" ;
+    rdfs:domain eao:forsesigtAnalysis ;
+    rdfs:range eao:EthicalEvaluation .
+
+eao:isAbout a owl:ObjectProperty ;
+    rdfs:label "is about" ;
+    rdfs:domain eao:EthicalAnalysis .
+
+eao:isCollectionOf a owl:ObjectProperty ;
+    rdfs:label "is collection of" ;
+    rdfs:domain modsci:Technology ;
+    rdfs:range eao:Technique .
+
+eao:isUsedIn a owl:ObjectProperty ;
+    rdfs:label "is used in" ;
+    rdfs:domain eao:Artefact ;
+    rdfs:range eao:Application .
+
+eao:issuesIdentification a owl:Class ;
+    rdfs:label "issues Identification" ;
+    rdfs:subClassOf eao:forsesigtAnalysis .
+
+eao:purpose a owl:DatatypeProperty ;
+    rdfs:label "purpose" ;
+    rdfs:domain modsci:Technology ;
+    rdfs:range xsd:string .
+
+eao:specificActivity a owl:DatatypeProperty ;
+    rdfs:label "specific activity" ;
+    rdfs:domain eao:Technique ;
+    rdfs:range xsd:string .
+
+eao:suggest a owl:ObjectProperty ;
+    rdfs:label "suggest" ;
+    rdfs:domain eao:ExpectationEvaluation .
+
+eao:supportExpectation a owl:ObjectProperty ;
+    rdfs:label "support expectation" ;
+    rdfs:domain eao:ExpectationEvaluation ;
+    rdfs:range eao:Expectation .
+
+eao:typeOfTechnology a owl:DatatypeProperty ;
+    rdfs:label "type of technology" ;
+    rdfs:domain modsci:Technology ;
+    rdfs:range xsd:string .
+
+eao:use a owl:DatatypeProperty ;
+    rdfs:label "use" ;
+    rdfs:domain eao:Application ;
+    rdfs:range xsd:string .
+
+eao:usedBy a owl:ObjectProperty ;
+    rdfs:label "used by" ;
+    rdfs:domain modsci:Technology .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain eao:EthicalAssessment .
+
+pav:authoredBy a owl:ObjectProperty ;
+    rdfs:label "authored by" ;
+    rdfs:domain eao:EthicalAssessment ;
+    rdfs:range prov:Agent .
+
+pav:createdBy a owl:ObjectProperty ;
+    rdfs:label "created by" ;
+    rdfs:domain eao:ExpectationEvaluation,
+        ebocaev:Evidence .
+
+pav:createdOn a owl:DatatypeProperty ;
+    rdfs:label "created on" ;
+    rdfs:domain ebocaev:Evidence .
+
+pav:derivedFrom a owl:ObjectProperty ;
+    rdfs:label "derived from" ;
+    rdfs:domain eao:EthicalEvaluation,
+        eao:EthicalIssue,
+        eao:Expectation,
+        eao:ExpectationEvaluation,
+        ebocaev:Evidence ;
+    rdfs:range eao:EthicalList,
+        eao:Source,
+        ebocaev:Evidence .
+
+pav:lastUpdatedOn a owl:DatatypeProperty ;
+    rdfs:label "last updated on" ;
+    rdfs:domain ebocaev:Evidence .
+
+pav:version a owl:DatatypeProperty ;
+    rdfs:label "version" ;
+    rdfs:domain ebocaev:Evidence .
+
+rdfs:comment a owl:DatatypeProperty ;
+    rdfs:label "comment" ;
+    rdfs:domain eao:ArtefactLevel .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:label "label" ;
+    rdfs:domain eao:EthicalAssessment .
+
+foaf:Group a owl:Class ;
+    rdfs:label "Group" .
+
+foaf:givenName a owl:DatatypeProperty ;
+    rdfs:label "given name" ;
+    rdfs:domain prov:Agent .
+
+foaf:mbox a owl:DatatypeProperty ;
+    rdfs:label "mbox" ;
+    rdfs:domain prov:Agent .
+
+eao:ApplicationLevel a owl:Class ;
+    rdfs:label "Application Level" ;
+    rdfs:subClassOf eao:EthicalAnalysis .
+
+eao:EthicalList a owl:Class ;
+    rdfs:label "Ethical List" .
+
+eao:Source a owl:Class ;
+    rdfs:label "Source" .
+
+eao:TechnologyLevel a owl:Class ;
+    rdfs:label "Technology Level" ;
+    rdfs:subClassOf eao:EthicalAnalysis .
+
+eao:Artefact a owl:Class ;
+    rdfs:label "Artefact" .
+
+eao:ArtefactLevel a owl:Class ;
+    rdfs:label "Artefact Level" ;
+    rdfs:subClassOf eao:EthicalAnalysis .
+
+eao:Technique a owl:Class ;
+    rdfs:label "Technique" .
+
+eao:Application a owl:Class ;
+    rdfs:label "Application" .
+
+eao:EthicalIssue a owl:Class ;
+    rdfs:label "Ethical Issue" .
+
+eao:ExpectationAnalysis a owl:Class ;
+    rdfs:label "Expectation Analysis" .
+
+eao:Feature a owl:Class ;
+    rdfs:label "Feature" .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+eao:forsesigtAnalysis a owl:Class ;
+    rdfs:label "forsesigt Analysis" .
+
+eao:EthicalAssessment a owl:Class ;
+    rdfs:label "Ethical Assessment" .
+
+eao:Expectation a owl:Class ;
+    rdfs:label "Expectation" .
+
+eao:EthicalEvaluation a owl:Class ;
+    rdfs:label "Ethical Evaluation" .
+
+ebocaev:Evidence a owl:Class ;
+    rdfs:label "Evidence" .
+
+eao:EthicalAnalysis a owl:Class ;
+    rdfs:label "Ethical Analysis" .
+
+modsci:Technology a owl:Class ;
+    rdfs:label "Technology" .
+
+eao:ExpectationEvaluation a owl:Class ;
+    rdfs:label "Expectation Evaluation" .
+
